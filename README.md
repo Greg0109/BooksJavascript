@@ -16,12 +16,18 @@ Books are displayed on top of the page
 - Download or clone this repo by using `git clone https://github.com/Greg0109/BooksJavascript.git`
 - Enter the project folder and run locally by using a VS Code extension such as `Live Server`.
 
-## Author
+## Authors
 
 👤 **Greg Rabago**
 
 - GitHub: [@Greg0109](https://github.com/greg0109)
 - Twitter: [@Greg_0109](https://twitter.com/greg_0109)
+
+👤 **Aganze Mataba Henri**
+
+- GitHub: [@hiromataba](https://github.com/hiromataba)
+- Twitter: [@twitterMatabahiro](https://twitter.com/MatabaHiro)
+- LinkedIn: [Hiro Mataba](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
 
 ## 🤝 Contributing
 
