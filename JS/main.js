@@ -1,5 +1,8 @@
 let books = [];
 
+books = JSON.parse( localStorage.getItem( 'Books' ) );
+displaybooks();
+
 function book(title, author) {
     this.title = title;
     this.author = author;
@@ -8,6 +11,7 @@ function book(title, author) {
 function newBook(title, author) {
     let newestBook = new book(title, author);
     books.push(newestBook);
+    localStorage.setItem('Books', JSON.stringify(books));
 }
 
 let addButton = document.getElementById("add-button");
@@ -23,6 +27,7 @@ addButton.addEventListener("click", (data) => {
 function removebook (){
     books.splice(this.parentNode, 1);
     this.parentNode.remove();
+    localStorage.setItem('Books', JSON.stringify(books));
 }
 
 function displaybooks(){
