@@ -17,4 +17,12 @@ addButton.addEventListener("click", (data) => {
     let author = document.getElementById("author").value;
     newBook(title, author);
     //console.log(books)
+    displaybooks();
+
 });
+
+
+function displaybooks(){
+    let displayBooks = document.querySelector('.display-books');
+    displayBooks.appendChild(books);
+}
