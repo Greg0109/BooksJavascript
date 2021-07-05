@@ -6,9 +6,9 @@ Users can create books which they have read along with the author. Users can del
 
 Books are displayed on top of the page
 
-see Live demo: 
+See Live demo: 
 
-[Live demo]()
+[Live demo](https://greg0109.github.io/BooksJavascript/)
 
 ## Built With
 
