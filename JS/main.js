@@ -18,11 +18,26 @@ addButton.addEventListener("click", (data) => {
     newBook(title, author);
     //console.log(books)
     displaybooks();
-
 });
 
 
 function displaybooks(){
     let displayBooks = document.querySelector('.display-books');
-    displayBooks.appendChild(books);
+    displayBooks.innerHTML = "";
+
+    books.forEach(function (book) {
+        let mainDiv = document.createElement("div");
+        mainDiv.classList.add('book');
+
+        let title = document.createElement("h2");
+        title.classList.add('book-title');
+        title.textContent = book.title;
+
+        let author = document.createElement("h3");
+        author.classList.add('book-author');
+        author.textContent = book.author;
+
+        mainDiv.append(title, author);
+        displayBooks.appendChild(mainDiv);
+    });
 }
