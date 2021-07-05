@@ -1,6 +1,6 @@
 let books = [];
 
-if (localStorage.getItem['Books'] !== null) {
+if ("Books" in localStorage) {
   books = JSON.parse(localStorage.getItem('Books'));
 }
 
