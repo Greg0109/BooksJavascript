@@ -37,7 +37,35 @@ function displaybooks(){
         author.classList.add('book-author');
         author.textContent = book.author;
 
-        mainDiv.append(title, author);
+        let deleteBtn = document.createElement("button");
+        deleteBtn.classList.add('btn-remove');
+        deleteBtn.innerHTML = 'Remove';
+
+        deleteBtn.addEventListener('click', () => {
+            title.parentNode.removeChild(title);
+            author.parentNode.removeChild(author);
+            deleteBtn.parentNode.removeChild(deleteBtn);
+        })
+        
+        mainDiv.append(title, author,deleteBtn);
         displayBooks.appendChild(mainDiv);
     });
+
 }
+
+
+
+
+
+function removeItem(){
+    console.log('it works')
+}
+
+
+// function removebook (title,author){
+//     for(let i = 0 ; i < books.length; i++){
+//         if(books[i].title == title){
+//             books.splice(i,1);
+//         }
+//     }
+// }
