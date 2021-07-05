@@ -1,6 +1,8 @@
 let books = [];
 
-books = JSON.parse(localStorage.getItem('Books'));
+if (localStorage.getItem['Books'] !== null) {
+  books = JSON.parse(localStorage.getItem('Books'));
+}
 
 function Book(title, author) {
   this.title = title;
