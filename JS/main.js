@@ -16,10 +16,14 @@ addButton.addEventListener("click", (data) => {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     newBook(title, author);
-    //console.log(books)
     displaybooks();
 });
 
+
+function removebook (){
+    books.splice(this.parentNode, 1);
+    this.parentNode.remove();
+}
 
 function displaybooks(){
     let displayBooks = document.querySelector('.display-books');
@@ -38,34 +42,12 @@ function displaybooks(){
         author.textContent = book.author;
 
         let deleteBtn = document.createElement("button");
-        deleteBtn.classList.add('btn-remove');
-        deleteBtn.innerHTML = 'Remove';
-
-        deleteBtn.addEventListener('click', () => {
-            title.parentNode.removeChild(title);
-            author.parentNode.removeChild(author);
-            deleteBtn.parentNode.removeChild(deleteBtn);
-        })
+        deleteBtn.classList.add("btn-danger");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.addEventListener("click", removebook);
         
         mainDiv.append(title, author,deleteBtn);
         displayBooks.appendChild(mainDiv);
     });
 
 }
-
-
-
-
-
-function removeItem(){
-    console.log('it works')
-}
-
-
-// function removebook (title,author){
-//     for(let i = 0 ; i < books.length; i++){
-//         if(books[i].title == title){
-//             books.splice(i,1);
-//         }
-//     }
-// }
