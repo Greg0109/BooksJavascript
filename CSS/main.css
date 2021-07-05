@@ -1,0 +1,12 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-remove {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
