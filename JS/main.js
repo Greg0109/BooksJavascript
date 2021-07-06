@@ -1,13 +1,13 @@
 class Book {
   books = JSON.parse(localStorage.getItem('Books')) || [];
 
-  constructor (title, author) {
+  constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 
   addBook() {
-    let newestBook = new Book(this.title, this.author);
+    const newestBook = new Book(this.title, this.author);
     if (this.books.length > 0) {
       this.books.push(newestBook);
     } else {
@@ -18,7 +18,7 @@ class Book {
 
   removeBook(index) {
     this.books.splice(index, 1);
-    location.reload();
+    window.location.reload();
     localStorage.setItem('Books', JSON.stringify(this.books));
   }
 }
@@ -28,9 +28,9 @@ const addButton = document.getElementById('add-button');
 function displaybooks() {
   const displayBooks = document.querySelector('.display-books');
   displayBooks.innerHTML = '';
-  let library = new Book();
+  const library = new Book();
   if (library.books.length > 0) {
-    library.books.forEach(function(book,index) {
+    library.books.forEach((book, index) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
 
@@ -46,9 +46,9 @@ function displaybooks() {
       deleteBtn.classList.add('btn-danger');
       deleteBtn.textContent = 'Delete';
       book = new Book(book.title, book.author);
-      deleteBtn.onclick = function() {
+      deleteBtn.onclick = function () {
         book.removeBook(index);
-      }
+      };
 
       mainDiv.append(title, author, deleteBtn);
       displayBooks.appendChild(mainDiv);
@@ -59,7 +59,7 @@ function displaybooks() {
 addButton.addEventListener('click', () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  let newBook = new Book(title, author);
+  const newBook = new Book(title, author);
   newBook.addBook();
   displaybooks();
 });
