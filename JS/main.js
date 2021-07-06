@@ -1,10 +1,6 @@
-let books = [];
-
-if ('Books' in localStorage) {
-  books = JSON.parse(localStorage.getItem('Books'));
-}
-
 class Book {
+  books = JSON.parse(localStorage.getItem('Books')) || [];
+
   constructor (title, author) {
     this.title = title;
     this.author = author;
@@ -12,18 +8,18 @@ class Book {
 
   addBook() {
     let newestBook = new Book(this.title, this.author);
-    if (books.length > 0) {
-      books.push(newestBook);
+    if (this.books.length > 0) {
+      this.books.push(newestBook);
     } else {
-      books = [newestBook];
+      this.books = [newestBook];
     }
-    localStorage.setItem('Books', JSON.stringify(books));
+    localStorage.setItem('Books', JSON.stringify(this.books));
   }
 
   removeBook(index) {
-    books.splice(index, 1);
+    this.books.splice(index, 1);
     location.reload();
-    localStorage.setItem('Books', JSON.stringify(books));
+    localStorage.setItem('Books', JSON.stringify(this.books));
   }
 }
 
@@ -32,9 +28,9 @@ const addButton = document.getElementById('add-button');
 function displaybooks() {
   const displayBooks = document.querySelector('.display-books');
   displayBooks.innerHTML = '';
-
-  if (books.length > 0) {
-    books.forEach(function(book,index) {
+  let library = new Book();
+  if (library.books.length > 0) {
+    library.books.forEach(function(book,index) {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
 
