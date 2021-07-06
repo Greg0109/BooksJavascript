@@ -1,38 +1,36 @@
-let books = [];
+class Book {
+  books = JSON.parse(localStorage.getItem('Books')) || [];
 
-if ('Books' in localStorage) {
-  books = JSON.parse(localStorage.getItem('Books'));
-}
-
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-function newBook(title, author) {
-  const newestBook = new Book(title, author);
-  if (books.length > 0) {
-    books.push(newestBook);
-  } else {
-    books = [newestBook];
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-  localStorage.setItem('Books', JSON.stringify(books));
+
+  addBook() {
+    const newestBook = new Book(this.title, this.author);
+    if (this.books.length > 0) {
+      this.books.push(newestBook);
+    } else {
+      this.books = [newestBook];
+    }
+    localStorage.setItem('Books', JSON.stringify(this.books));
+  }
+
+  removeBook(index) {
+    this.books.splice(index, 1);
+    window.location.reload();
+    localStorage.setItem('Books', JSON.stringify(this.books));
+  }
 }
 
 const addButton = document.getElementById('add-button');
 
-function removebook() {
-  books.splice(this.parentNode, 1);
-  this.parentNode.remove();
-  localStorage.setItem('Books', JSON.stringify(books));
-}
-
 function displaybooks() {
   const displayBooks = document.querySelector('.display-books');
   displayBooks.innerHTML = '';
-
-  if (books.length > 0) {
-    books.forEach((book) => {
+  const library = new Book();
+  if (library.books.length > 0) {
+    library.books.forEach((book, index) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
 
@@ -47,7 +45,10 @@ function displaybooks() {
       const deleteBtn = document.createElement('button');
       deleteBtn.classList.add('btn-danger');
       deleteBtn.textContent = 'Delete';
-      deleteBtn.addEventListener('click', removebook);
+      book = new Book(book.title, book.author);
+      deleteBtn.onclick = function deleteButton() {
+        book.removeBook(index);
+      };
 
       mainDiv.append(title, author, deleteBtn);
       displayBooks.appendChild(mainDiv);
@@ -58,7 +59,8 @@ function displaybooks() {
 addButton.addEventListener('click', () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  newBook(title, author);
+  const newBook = new Book(title, author);
+  newBook.addBook();
   displaybooks();
 });
 
