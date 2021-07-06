@@ -46,7 +46,7 @@ function displaybooks() {
       deleteBtn.classList.add('btn-danger');
       deleteBtn.textContent = 'Delete';
       book = new Book(book.title, book.author);
-      deleteBtn.onclick = function () {
+      deleteBtn.onclick = function deleteButton() {
         book.removeBook(index);
       };
 
