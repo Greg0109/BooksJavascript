@@ -4,35 +4,37 @@ if ('Books' in localStorage) {
   books = JSON.parse(localStorage.getItem('Books'));
 }
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-function newBook(title, author) {
-  const newestBook = new Book(title, author);
-  if (books.length > 0) {
-    books.push(newestBook);
-  } else {
-    books = [newestBook];
+class Book {
+  constructor (title, author) {
+    this.title = title;
+    this.author = author;
   }
-  localStorage.setItem('Books', JSON.stringify(books));
+
+  addBook() {
+    let newestBook = new Book(this.title, this.author);
+    if (books.length > 0) {
+      books.push(newestBook);
+    } else {
+      books = [newestBook];
+    }
+    localStorage.setItem('Books', JSON.stringify(books));
+  }
+
+  removeBook(index) {
+    books.splice(index, 1);
+    location.reload();
+    localStorage.setItem('Books', JSON.stringify(books));
+  }
 }
 
 const addButton = document.getElementById('add-button');
-
-function removebook() {
-  books.splice(this.parentNode, 1);
-  this.parentNode.remove();
-  localStorage.setItem('Books', JSON.stringify(books));
-}
 
 function displaybooks() {
   const displayBooks = document.querySelector('.display-books');
   displayBooks.innerHTML = '';
 
   if (books.length > 0) {
-    books.forEach((book) => {
+    books.forEach(function(book,index) {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
 
@@ -47,7 +49,10 @@ function displaybooks() {
       const deleteBtn = document.createElement('button');
       deleteBtn.classList.add('btn-danger');
       deleteBtn.textContent = 'Delete';
-      deleteBtn.addEventListener('click', removebook);
+      book = new Book(book.title, book.author);
+      deleteBtn.onclick = function() {
+        book.removeBook(index);
+      }
 
       mainDiv.append(title, author, deleteBtn);
       displayBooks.appendChild(mainDiv);
@@ -58,7 +63,8 @@ function displaybooks() {
 addButton.addEventListener('click', () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  newBook(title, author);
+  let newBook = new Book(title, author);
+  newBook.addBook();
   displaybooks();
 });
 
