@@ -28,11 +28,6 @@ body {
           justify-content: center;
 }
 
-.display-books {
-  width: 80%;
-  margin: 0 auto;
-}
-
 form input {
   width: 40%;
   font-size: 17px;
@@ -53,11 +48,10 @@ form input {
 }
 
 .display-books {
-  width: 80%;
+  width: 100%;
   border: 5px;
   border-color: black;
   border-style: double;
-  margin-left: 25%;
 }
 
 .add-book-title {
