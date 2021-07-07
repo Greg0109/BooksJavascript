@@ -33,6 +33,9 @@ function displaybooks() {
     library.books.forEach((book, index) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
+      if (index%2 != 0) {
+        mainDiv.classList.add('bg-secondary')
+      }
 
       const title = document.createElement('h2');
       title.classList.add('book-title');
@@ -43,7 +46,8 @@ function displaybooks() {
       author.textContent = book.author;
 
       const deleteBtn = document.createElement('button');
-      deleteBtn.classList.add('btn-danger');
+      deleteBtn.classList.add('btn-dark');
+      deleteBtn.classList.add('delete-book-button');
       deleteBtn.textContent = 'Delete';
       book = new Book(book.title, book.author);
       deleteBtn.onclick = function deleteButton() {
