@@ -38,7 +38,7 @@ function displaybooks() {
       title.classList.add('book-title');
       title.textContent = book.title;
 
-      const author = document.createElement('h3');
+      const author = document.createElement('h2');
       author.classList.add('book-author');
       author.textContent = book.author;
 

@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-remove {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.display-books {
+  border: 5px;
+  border-color: black;
+  border-style: double;
+  margin-left: 25%;
+}
+
+.book {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  text-align: center;
+  .book-title {
+    padding-left: 10px;
+    padding-right: 80px;
+  }
+  .book-author {
+    padding-right: 180px;
+  }
+}
