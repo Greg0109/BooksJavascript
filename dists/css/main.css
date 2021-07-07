@@ -1,0 +1,117 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-remove {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.books-header {
+  font-size: 35px;
+}
+
+.book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.display-books {
+  width: 80%;
+  margin: 0 auto;
+}
+
+form input {
+  width: 40%;
+  font-size: 17px;
+  padding-left: 10px;
+  height: 35px;
+}
+
+#add-button {
+  width: 100px;
+  border: none;
+  background-color: rgba(49, 48, 48, 0.767);
+  color: #fff;
+  -webkit-box-shadow: 4px 4px black;
+          box-shadow: 4px 4px black;
+  margin-top: 25px;
+  -webkit-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+}
+
+.display-books {
+  width: 80%;
+  border: 5px;
+  border-color: black;
+  border-style: double;
+  margin-left: 25%;
+}
+
+.add-book-title {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.title-border-top {
+  width: 100px;
+  border-top: 3px solid #242323;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 10px;
+  margin-top: 20px;
+}
+
+.book-bg {
+  background-color: rgba(128, 128, 128, 0.527);
+}
+
+.book {
+  margin: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book .book-title {
+  padding-left: 10px;
+  padding-right: 80px;
+  font-size: 19px;
+}
+
+.book .book-author {
+  padding-right: 180px;
+  font-size: 19px;
+}
