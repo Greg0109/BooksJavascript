@@ -34,7 +34,7 @@ function displaybooks() {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('book');
       if (index%2 != 0) {
-        mainDiv.classList.add('bg-secondary')
+        mainDiv.classList.add('book-bg')
       }
 
       const title = document.createElement('h2');
