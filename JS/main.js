@@ -23,6 +23,18 @@ class Book {
   }
 }
 
+function getDate() {
+  var DateTime = luxon.DateTime;
+  const dateDiv = document.getElementById('date');
+  const date = DateTime.now().toFormat('MMMM dd, yyyy - HH:mm:ss');
+  console.log(date);
+  dateDiv.innerHTML = '';
+  const datetext = document.createElement('p');
+  datetext.classList.add('text-dark');
+  datetext.textContent =  date;
+  dateDiv.appendChild(datetext);
+}
+
 function displaybooks(show) {
   const displayBooks = document.querySelector('.display-books');
   displayBooks.innerHTML = '';
@@ -82,6 +94,7 @@ function showForm(show) {
       newBook.addBook();
       displaybooks(true);
       showForm(false);
+      getDate();
     });
   } else {
     const formDiv = document.getElementById('add-book-form');
@@ -104,6 +117,7 @@ libraryTab.addEventListener('click', () => {
   displaybooks(true);
   showForm(false);
   showContact(false);
+  getDate();
 });
 
 const newBookTab = document.getElementById('new-book-tab');
@@ -111,6 +125,7 @@ newBookTab.addEventListener('click', () => {
   showForm(true);
   displaybooks(false);
   showContact(false);
+  getDate();
 });
 
 const contactTab = document.getElementById('contact-tab');
@@ -118,6 +133,8 @@ contactTab.addEventListener('click', () => {
   showForm(false);
   displaybooks(false);
   showContact(true);
+  getDate();
 });
 
+getDate();
 displaybooks(true);
