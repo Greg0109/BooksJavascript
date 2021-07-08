@@ -8,29 +8,37 @@
     <title>Books</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
 </head>
-<body>
-
-
-    <h1 class="w-100 text-center" id="books-header">Books</h1>
-    <div class="display-books w-50 text-center">
-
-    </div>
-    <div class="mt-3 w-100 text-center">
-        <form action="" class="form  text-center">
-            <br>
-            <div class="title-border-top"></div>
-            <h2 class="add-book-title">Add a new book</h2>
-            <br>
-            <input type="text" name="title" id="title" placeholder="Title">
-            <br>
-            <br>
-            <input type="text" name="author" id="author" placeholder="Author">
+<header>
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="logo">Awesome Book</div>
+        <form class="form-inline">
+            <button id="libray-tab" class="btn btn-sm" type="button">Library</button>
+            <button id="new-book-tab" class="btn btn-sm" type="button">Add new book</button>
+            <button id="contact-tab" class="btn btn-sm" type="button">Contact</button>
+            <div id="date">
+            
+            </div>
         </form>
-       <div class="form-btn"> <button type="submit" class="text-center " id="add-button">Add</button></div>
+    </nav>
+</header>
+<body>
+    <div id="library-display" class="display-books w-50 text-center">
+        
     </div>
-
+    <div id="add-book-form" class="mt-3 w-100 text-center">
+        
+    </div>
     
+    <div id="contact" class="mt-3 ">
+        
+    </div>
+    
+    <footer>
+        <h2> Developed and Serviced By <a href="#">TeamWork</a> </h2>
+        <h3>&copy; 2021 All Right Reserved</h3>
+     </footer>
     <script src="JS/main.js"></script>
 </body>
 </html>
