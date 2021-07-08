@@ -21,7 +21,6 @@ body {
   margin: 0 auto;
   border: 5px;
   border-color: #000;
-  border-style: double;
 }
 
 form input {
@@ -43,13 +42,6 @@ form input {
 .add-book-title {
   padding-bottom: 10px;
   padding-top: 5px;
-}
-
-.title-border-top {
-  width: 100px;
-  border-top: 3px solid #242323;
-  margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .form {
