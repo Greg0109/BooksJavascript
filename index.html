@@ -12,22 +12,22 @@
 <body>
 
 
-    <h1 class="w-100 text-center">Books</h1>
-    <div class="display-books">
+    <h1 class="w-100 text-center" id="books-header">Books</h1>
+    <div class="display-books w-50 text-center">
 
     </div>
     <div class="mt-3 w-100 text-center">
-        <form action="" class="form w-100 text-center mt-5">
-            <label for="title">Title</label>
+        <form action="" class="form  text-center">
             <br>
-            <input type="text" name="title" id="title">
+            <div class="title-border-top"></div>
+            <h2 class="add-book-title">Add a new book</h2>
+            <br>
+            <input type="text" name="title" id="title" placeholder="Title">
             <br>
             <br>
-            <label for="author">Author</label>
-            <br>
-            <input type="text" name="author" id="author">
+            <input type="text" name="author" id="author" placeholder="Author">
         </form>
-        <button type="submit" class="btn-danger w-100 text-center mt-5" id="add-button">Add Book</button>
+       <div class="form-btn"> <button type="submit" class="text-center " id="add-button">Add</button></div>
     </div>
 
     
