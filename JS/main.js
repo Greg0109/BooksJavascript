@@ -23,15 +23,14 @@ class Book {
   }
 }
 
-function getDate() {
-  var DateTime = luxon.DateTime;
+function getDate() {
+  const DateTime = window.luxon.DateTime;
   const dateDiv = document.getElementById('date');
   const date = DateTime.now().toFormat('MMMM dd, yyyy - HH:mm:ss');
-  console.log(date);
   dateDiv.innerHTML = '';
   const datetext = document.createElement('p');
   datetext.classList.add('text-dark');
-  datetext.textContent =  date;
+  datetext.textContent = date;
   dateDiv.appendChild(datetext);
 }
 
