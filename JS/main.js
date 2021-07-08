@@ -92,7 +92,7 @@ function showForm(show) {
 function showContact(show) {
   if (show) {
     const contactDiv = document.getElementById('contact');
-    contactDiv.innerHTML = '<div class="contact-info"><h2>Contact Information</h2><p>Do you have any questions or just want to say "Hello" ? you can reach out to us</p><ul><li>Our Email: aganzemataba@gmail.com</li><li>Our Phone: +250784165089</li><li>Our Adress: Maranatha 65, 8891, Goma Town, Congo DRC </li></ul></div>';
+    contactDiv.innerHTML = '<div class="contact-info"><h2>Contact Information</h2><p>Do you have any questions or just want to say "Hello" ? you can reach out to us 😀!</p><ul><li>Our Email: aganzemataba@gmail.com</li><li>Our Phone: +250784165089</li><li>Our Adress: Maranatha 65, 8891, Goma Town, Congo DRC </li></ul></div>';
   } else {
     const contactDiv = document.getElementById('contact');
     contactDiv.innerHTML = '';

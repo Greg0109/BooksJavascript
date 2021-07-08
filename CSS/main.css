@@ -8,6 +8,13 @@ body {
   padding-left: 15px;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .btn-remove {
   border: none;
   background-color: red;
@@ -43,8 +50,8 @@ body {
 .display-books {
   width: 100%;
   border: 5px;
-  border-color: #000;
-  margin: 40px auto;
+  border-color: rgb(68, 66, 66);
+  margin: 90px auto;
 }
 
 form input {
@@ -132,10 +139,11 @@ footer h3 {
   margin: 0 auto;
 }
 
-#contact ul {
-  list-style: none;
-}
-
 #contact h2 {
   margin-bottom: 30px;
+  text-align: center;
+}
+
+#contact p {
+  text-align: center;
 }
