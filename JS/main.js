@@ -28,12 +28,12 @@ function displaybooks(show) {
   displayBooks.innerHTML = '';
   if (show) {
     const library = new Book();
-    const libraryTitle = document.createElement('h1')
-    libraryTitle.classList.add("w-100");
-    libraryTitle.classList.add("text-center");
-    libraryTitle.id = "books-header";
-    libraryTitle.textContent = "Books";
-    displayBooks.append(libraryTitle)
+    const libraryTitle = document.createElement('h1');
+    libraryTitle.classList.add('w-100');
+    libraryTitle.classList.add('text-center');
+    libraryTitle.id = 'books-header';
+    libraryTitle.textContent = 'Books';
+    displayBooks.append(libraryTitle);
     if (library.books.length > 0) {
       library.books.forEach((book, index) => {
         const mainDiv = document.createElement('div');
@@ -61,11 +61,11 @@ function displaybooks(show) {
 
         mainDiv.append(title, author, deleteBtn);
         displayBooks.appendChild(mainDiv);
-        document.getElementById("library-display").style.borderStyle = "double";
+        document.getElementById('library-display').style.borderStyle = 'double';
       });
     }
   } else {
-    document.getElementById("library-display").style.borderStyle = "";
+    document.getElementById('library-display').style.borderStyle = '';
   }
 }
 
@@ -73,7 +73,7 @@ function showForm(show) {
   if (show) {
     const formDiv = document.getElementById('add-book-form');
     formDiv.innerHTML = "<form action='' class='form  text-center'><br><div class='title-border-top'></div><h2 class='add-book-title'>Add a new book</h2><br><input type='text' name='title' id='title' placeholder='Title'><br><br><input type='text' name='author' id='author' placeholder='Author'></form><div class='form-btn'> <button type='submit' class='text-center ' id='add-button'>Add</button></div>";
-    
+
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', () => {
       const title = document.getElementById('title').value;
@@ -85,7 +85,7 @@ function showForm(show) {
     });
   } else {
     const formDiv = document.getElementById('add-book-form');
-    formDiv.innerHTML = "";
+    formDiv.innerHTML = '';
   }
 }
 
