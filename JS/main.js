@@ -24,7 +24,7 @@ class Book {
 }
 
 function getDate() {
-  const DateTime = window.luxon.DateTime;
+  const { DateTime } = window.luxon;
   const dateDiv = document.getElementById('date');
   const date = DateTime.now().toFormat('MMMM dd, yyyy - HH:mm:ss');
   dateDiv.innerHTML = '';
