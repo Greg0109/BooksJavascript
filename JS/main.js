@@ -31,7 +31,7 @@ function getDate() {
   const datetext = document.createElement('p');
   datetext.classList.add('text-dark');
   datetext.textContent = date;
-  dateDiv.appendChild(datetext);
+  dateDiv.append(datetext);
 }
 
 function displaybooks(show) {
