@@ -83,7 +83,7 @@ function displaybooks(show) {
 function showForm(show) {
   if (show) {
     const formDiv = document.getElementById('add-book-form');
-    formDiv.innerHTML = "<form action='' class='form  text-center'><br><div class='title-border-top'></div><h2 class='add-book-title'>Add a new book</h2><br><input type='text' name='title' id='title' placeholder='Title'><br><br><input type='text' name='author' id='author' placeholder='Author'></form><div class='form-btn'> <button type='submit' class='text-center ' id='add-button'>Add</button></div>";
+    formDiv.innerHTML = "<form action='' class='form  text-center'><br><div class='title-border-top'></div><h2 class='add-book-title'>Add new book</h2><br><input type='text' name='title' id='title' placeholder='Title'><br><br><input type='text' name='author' id='author' placeholder='Author'></form><div class='form-btn'> <button type='submit' class='text-center ' id='add-button'>Add</button></div>";
 
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', () => {
