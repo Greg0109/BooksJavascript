@@ -25,9 +25,9 @@ class Book {
 
 function getDate() {
   const { DateTime } = window.luxon;
-  const dateDiv = document.getElementById('date');
+  const dateContainer = document.getElementById('date');
   const date = DateTime.now().toFormat('MMMM dd, yyyy - HH:mm:ss');
-  dateDiv.innerHTML = '';
+  dateContainer.innerHTML = '';
   const datetext = document.createElement('p');
   datetext.classList.add('text-dark');
   datetext.textContent = date;

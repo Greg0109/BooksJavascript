@@ -55,6 +55,19 @@ body {
   margin: 120px auto;
 }
 
+#date {
+  /* z-index: 10000; */
+  /* float: right; */
+  /* position: fixed; */
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 30px;
+  padding-top: 70px;
+}
+
 form input {
   width: 40%;
   font-size: 17px;
